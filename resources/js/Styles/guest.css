@@ -17,6 +17,22 @@
     width: 30%;
     height: 100%;
     background-color: #026c90;
+    align-items: center;align-content: center;justify-content: center;display: flex;
+}
+.lefticon{
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    width: 30%;
+    font-weight: bolder;
+    font-size: 35px;
+    color: #fff;
+    cursor: pointer;
+}
+.lefticon:hover{
+    color: #f1be04;
+    transition: 0.5s;
 }
 .guesttopheadcontenright{
     width: 70%;

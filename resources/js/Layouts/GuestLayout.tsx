@@ -2,7 +2,7 @@ import { Link } from '@inertiajs/react';
 import { PropsWithChildren, useState, useEffect } from 'react';
 import '@/Styles/guest.css';
 import '@/Styles/guestmobile.css';
-import { FaBars, FaArrowLeft } from 'react-icons/fa';
+import { FaBars, FaWhatsappSquare } from 'react-icons/fa';
 import { Inertia } from '@inertiajs/inertia';
 import Loader from '@/Components/Loader'; // Import your custom Loader component
 
@@ -31,7 +31,10 @@ export default function Guest({ children }: PropsWithChildren) {
             <div className="guestcontainer">
                 <div className="guestmain">
                     <div className="guesttophead1">
-                        <div className="guesttopheadcontenleft"></div>
+                        <div className="guesttopheadcontenleft">
+                        <div className="lefticon" onClick={() => window.open('https://wa.me/2250500126993', '_blank')}><FaWhatsappSquare /></div>
+                            
+                        </div>
                         <div className="guesttopheadcontenright"></div>
                     </div>
                 </div>
