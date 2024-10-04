@@ -6,12 +6,15 @@
 }
 .slidersection{
     width: 100%;
-    height: 500px;
+    /* height: 500px; */
     background-color: rgb(113, 2, 2);
     align-items: center;
     align-content: center;
     justify-content: center;
     /* display: flex; */
+}
+.slidersection img {
+    width: 100%;
 }
 .divsection{
     align-items: center;

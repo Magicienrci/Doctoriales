@@ -16,12 +16,12 @@
 .guesttopheadcontenleft{
     width: 30%;
     height: 100%;
-    background-color: #515050;
+    background-color: #026c90;
 }
 .guesttopheadcontenright{
     width: 70%;
     height: 100%;
-    background-color: #ce710c;
+    background-color: #f1be04;
 
 }
 .guesttophead2{
@@ -64,12 +64,14 @@
     justify-content: center;
     display: flex;
     cursor: pointer;
+    font-size: 20px;
 }
 .guesttophead2contentrightbutton{
-    background-color: #ce710c;
-    color: #fff;
+    background-color: #f1be04;
+    color: #030000;
     width: 40%;
-    padding: 15px;
+    padding: 10px;
+    /* font-size: 22px; */
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -78,21 +80,28 @@
     
 }
 .guesttophead2contentrightbutton:hover{
-    background-color: #515050;
-    color: #ce710c;
+    background-color: #026c90;
+    color: #ffffff;
     transition: 0.5s;
+    border: #f1be04 solid 2px;
 }
 .guesttophead2contentrightbutton2{
-    background-color: #515050;
+    background-color: #026c90;
     color: #fff;
     margin-right: 5px;
     width: 40%;
-    padding: 15px;
+    padding: 10px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     border-bottom-left-radius: 25px;
     align-items: center;align-content: center;justify-content: center;display: flex;
     font-weight: bolder;
+}
+.guesttophead2contentrightbutton2:hover{
+    background-color: #f1be04;
+    color: #ffffff;
+    transition: 0.5s;
+    border: #026c90 solid 2px;
 }
 
 /* Pour le children*/

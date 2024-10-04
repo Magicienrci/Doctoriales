@@ -36,7 +36,9 @@ export default function Guest({ children }: PropsWithChildren) {
                     </div>
                 </div>
                 <div className="guesttophead2">
-                    <div className="guesttophead2contentleft">
+                    <div className="guesttophead2contentleft"
+                        onClick={() => window.open('/', '_self')}
+                    >
                         <img src="https://doctoriales.inphb.ci/images/logoinphb.png" alt="Logo" />
                     </div>
                     <div className="guesttophead2contentmiddle">

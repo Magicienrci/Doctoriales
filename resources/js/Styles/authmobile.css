@@ -1,0 +1,65 @@
+@media screen and (min-width: 300px) and (max-width: 768px) {
+    .authmenu{
+        width: 100%;
+        padding: 1px;
+        background-color: #026c90;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+    .authmenurightinside{
+        width: 100%;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        display: flex;
+        /* flex-direction: column; */
+    }
+    .authmenuright{
+        width: 100%;
+        padding: 3px;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        display: flex;
+        /* background-color: #026c90; */
+    }
+    .authflex{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+    .authfleximage{
+        display: none;
+        width: 10%;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        /* display: flex; */
+        cursor: pointer;
+    }
+    .authfleximage img{
+        width: 80%;
+    }
+    .authflexlink{
+        width: 90%;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        /* font-size: 1px; */
+        display: flex;
+        color: #fff !important;
+    }
+    .authmenuleft{
+        width: 100%;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        display: none;
+    }
+
+}

@@ -23,14 +23,11 @@ export default function Welcome({ auth, laravelVersion, phpVersion }: PageProps<
                 <div className="welcomcontainer">
                     <section className="welcommain">
                         <div className="slidersection">
-                            {/* <Slidercomponent /> */}
+                            <img src="https://doctoriales.inphb.ci/images/bannerdoc.png" alt="" />
                         </div>
                     </section>
                     <section className='divsection'>
-                        <div className='divsectioncontent'>DIV 1</div>
-                        <div className='divsectioncontent'>DIV 2</div>
-                        <div className='divsectioncontent'>DIV 3</div>
-                        <div className='divsectioncontent'>DIV 4</div>
+
                     </section>
 
                 </div>
