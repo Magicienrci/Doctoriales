@@ -151,6 +151,74 @@
     animation: spin 1.5s linear infinite;
 }
 
+.guestnewmenu{
+    position: absolute;
+    width: 100%;
+    background-color: #ceccccd4;
+    padding: 30px;
+}
+.newmenunav{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
+    min-height: 25vh;
+}
+.newmenunav ul{
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+.newmenunav ul li{
+    width: 15%;
+    font-weight: bolder;
+    font-size: 20px;
+    height: 15vh;
+    border: #ffffff solid 2px;
+    border-radius: 15px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.navwhite{
+    background-color: #ffffff;
+    color: #000000;
+}
+.navwhite:hover{
+    background-color: #060606;
+    color: #fff;
+}
+.navbleu{
+    background-color: #026c90;
+    color: #fff;
+}
+.navbleu:hover{
+    background-color: #060606;
+    color: #fff;
+}
+.navyellow{
+    background-color: #f1be04;
+    color: #ffffff;
+}
+.navyellow:hover{
+    background-color: #060606;
+    color: #fff;
+}
+.navblack{
+    background-color: #8d8c8c;
+    color: #fff;
+}
+.navblack:hover{
+    background-color: #060606;
+    color: #fff;
+}
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);

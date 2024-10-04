@@ -2,12 +2,13 @@ import { Link } from '@inertiajs/react';
 import { PropsWithChildren, useState, useEffect } from 'react';
 import '@/Styles/guest.css';
 import '@/Styles/guestmobile.css';
-import { FaBars, FaWhatsappSquare } from 'react-icons/fa';
+import { FaBars, FaArrowLeft, FaWhatsappSquare } from 'react-icons/fa';
 import { Inertia } from '@inertiajs/inertia';
 import Loader from '@/Components/Loader'; // Import your custom Loader component
 
 export default function Guest({ children }: PropsWithChildren) {
     const [loading, setLoading] = useState(false); // State to track if page is loading
+    const [menuOpen, setMenuOpen] = useState(false); // State to track menu open/close
 
     useEffect(() => {
         const startLoading = () => setLoading(true);
@@ -24,6 +25,11 @@ export default function Guest({ children }: PropsWithChildren) {
         };
     }, []); // Empty dependency array ensures this runs only once
 
+    // Function to toggle the menu open/close
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
     return (
         <>
             {loading && <Loader />} {/* Show Loader when loading is true */}
@@ -32,8 +38,9 @@ export default function Guest({ children }: PropsWithChildren) {
                 <div className="guestmain">
                     <div className="guesttophead1">
                         <div className="guesttopheadcontenleft">
-                        <div className="lefticon" onClick={() => window.open('https://wa.me/2250500126993', '_blank')}><FaWhatsappSquare /></div>
-                            
+                            <div className="lefticon" onClick={() => window.open('https://wa.me/2250500126993', '_blank')}>
+                                <FaWhatsappSquare />
+                            </div>
                         </div>
                         <div className="guesttopheadcontenright"></div>
                     </div>
@@ -45,8 +52,8 @@ export default function Guest({ children }: PropsWithChildren) {
                         <img src="https://doctoriales.inphb.ci/images/logoinphb.png" alt="Logo" />
                     </div>
                     <div className="guesttophead2contentmiddle">
-                        <div className="guesttophead2contentmiddleic">
-                            <FaBars />
+                        <div className="guesttophead2contentmiddleic" onClick={toggleMenu}>
+                            {menuOpen ? <FaArrowLeft /> : <FaBars />} {/* Toggle between icons */}
                         </div>
                     </div>
                     <div className="guesttophead2contentright">
@@ -58,6 +65,22 @@ export default function Guest({ children }: PropsWithChildren) {
                         </Link>
                     </div>
                 </div>
+
+                {/* New Menu - Only visible when menuOpen is true */}
+                {menuOpen && (
+                    <>
+                        <div className="guestnewmenu">
+                            <div className='newmenunav'>
+                                <ul>
+                                    <li onClick={toggleMenu} className='navbleu'><Link href="/">Accueil</Link></li>
+                                    <li onClick={toggleMenu} className='navyellow'><Link href="/">Photothèque</Link></li>
+                                    <li onClick={toggleMenu} className='navwhite'><Link href="/">Actualités</Link></li>
+                                    <li onClick={toggleMenu} className='navblack'><Link href="/">à propos</Link></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </>
+                )}
 
                 <div className="guestchildren">{children}</div>
             </div>
