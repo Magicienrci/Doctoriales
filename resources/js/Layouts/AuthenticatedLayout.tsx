@@ -28,7 +28,7 @@ export default function Authenticated({ header, children }: PropsWithChildren<{ 
 
                                 <div className="authflexlink">
                                     <NavLink href={route('dashboard')} active={route().current('dashboard')}>
-                                        Dashboard
+                                        Tableau de board
                                     </NavLink>
                                 </div>
                             </div>
@@ -95,7 +95,7 @@ export default function Authenticated({ header, children }: PropsWithChildren<{ 
                             </div>
                         </div>
                     </div>
-
+                    {/* Pour le menu téléphone  */}
                     <div className={(showingNavigationDropdown ? 'block' : 'hidden') + ' sm:hidden'}>
                         <div className="pt-2 pb-3 space-y-1">
                             <ResponsiveNavLink href={route('dashboard')} active={route().current('dashboard')}>
@@ -127,7 +127,18 @@ export default function Authenticated({ header, children }: PropsWithChildren<{ 
                     </header>
                 )}
 
-                <main>{children}</main>
+                <main className='authmenumain'>
+                    <div className='authmenumainmenu'>
+                        <ul>
+                            <li 
+                                onClick={() => window.open('/dashboard', '_self')}
+                                className='libleu'
+                            >Dashboard</li>
+                        </ul>
+                    </div>
+                    <div className='autmenumainmiddle'></div>
+                    <div className='authmenumaincontent'>{children}</div>
+                </main>
             </div>
         </>
     );
