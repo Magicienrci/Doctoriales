@@ -82,7 +82,7 @@
     width: 84%;
     border-top-left-radius: 35px;
     background-color: rgb(195, 197, 197);
-    padding-top: 0px;
+    padding: 20px;
 }
 .authmenumainmenu ul{
     width: 100%;
@@ -118,5 +118,7 @@
     background-color: #026c90;
     color: #fff;
 }
+
+
 
 

@@ -5,6 +5,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserInformationController;
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -24,5 +25,10 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+// Pour les infos 
+Route::get('/informations', [UserInformationController::class, 'index'])->name('user.information')->middleware('auth');
+Route::post('/informations', [UserInformationController::class, 'store'])->name('user.store')->middleware('auth');
+Route::put('/informations/{userInformation}', [UserInformationController::class, 'update'])->name('user.update')->middleware('auth');
 
 require __DIR__.'/auth.php';

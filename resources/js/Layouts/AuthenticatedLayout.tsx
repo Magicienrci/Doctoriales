@@ -136,7 +136,7 @@ export default function Authenticated({ header, children }: PropsWithChildren<{ 
                             >Dashboard
                             </li>
                             <li 
-                                onClick={() => window.open('/dashboard', '_self')}
+                                onClick={() => window.open('/informations', '_self')}
                                 className='libleu'
                             >Informations
                             </li>
