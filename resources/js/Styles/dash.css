@@ -3,7 +3,7 @@
 }
 .dashsection{
     width: 100%;
-    background-color: rgb(234, 233, 231);
+    /* background-color: rgb(234, 233, 231); */
     padding-top: 5px;
     /* min-height: 70vh; */
     align-items: center;
@@ -20,6 +20,9 @@
 
 }
 .dashhead img{
-    width: 100%;
-    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    margin-top: 0px;
+    /* border-top-left-radius: 35px; */
 }

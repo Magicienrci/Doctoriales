@@ -58,7 +58,7 @@
 .authmenumain{
     display: flex;
     width: 100%;
-    /* min-height: 100vh; */
+    min-height: 90vh;
 }
 .autmenumainmiddle{
     width: 1%;
@@ -73,11 +73,16 @@
     justify-content: top;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    padding-top: 30px;
+    background-color: #e4f3f8;
+    border-top-right-radius: 35px;
 }
 .authmenumaincontent{
     /* display: flex; */
     width: 84%;
+    border-top-left-radius: 35px;
+    background-color: rgb(195, 197, 197);
+    padding-top: 0px;
 }
 .authmenumainmenu ul{
     width: 100%;
@@ -95,6 +100,7 @@
     align-content: center;
     justify-content: center; display: flex;
     font-weight: bolder;
+    margin-bottom: 10px;
 }
 
 .authmenumainmenu ul li:hover{
