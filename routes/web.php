@@ -36,4 +36,9 @@ Route::get('/communication', function () {
     return Inertia::render('UserCommunication');
 })->name('user.communication');
 
+//Pour le paiement 
+Route::get('/securepay', function () {
+    return Inertia::render('Paiement');
+})->name('user.communication');
+
 require __DIR__.'/auth.php';

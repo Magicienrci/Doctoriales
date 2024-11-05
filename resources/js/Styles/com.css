@@ -1,11 +1,40 @@
 .maincom{
     width: 100%;
 }
+.ppdoc{
+    width: 100%;
+}
+.ppdoc img{
+    width: 100%;
+}
+.ppdoc1{
+    width: 100%;
+    align-items: center;
+    align-content: center;justify-content: center;display: flex;
+}
+.ppdoc1 img{
+    width: 20%;
+    align-items: center;
+    align-content: center;justify-content: center;display: flex;
+}
+.payinfos{
+    width: 80%;
+    margin-left: auto;margin-right: auto;
+    height: 30vh;
+    background-color: rgba(255, 255, 255, 0.313);
+    border-radius: 15px;
+    border: #026c90 solid 2px;
+}
 .message{
     width: 90%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
+    text-align: center;
+}
+.message p{
+    font-weight: bolder;
+    font-size: 18px;
 }
 
 .lesbutton{
