@@ -8,7 +8,11 @@ import Loader from '@/Components/Loader'; // Import your custom Loader component
 
 export default function Guest({ children }: PropsWithChildren) {
     const [loading, setLoading] = useState(false); // State to track if page is loading
-    const [menuOpen, setMenuOpen] = useState(false); // State to track menu open/close
+    const [menuOpen, setMenuOpen] = useState(false); 
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
 
     useEffect(() => {
         const startLoading = () => setLoading(true);
@@ -26,9 +30,9 @@ export default function Guest({ children }: PropsWithChildren) {
     }, []); // Empty dependency array ensures this runs only once
 
     // Function to toggle the menu open/close
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
+    // const toggleMenu = () => {
+    //     setMenuOpen(!menuOpen);
+    // };
 
     return (
         <>
@@ -53,6 +57,7 @@ export default function Guest({ children }: PropsWithChildren) {
                     </div>
                     <div className="guesttophead2contentmiddle">
                         <div className="guesttophead2contentmiddleic" onClick={toggleMenu}>
+                            
                             {menuOpen ? <FaArrowLeft /> : <FaBars />} {/* Toggle between icons */}
                         </div>
                     </div>

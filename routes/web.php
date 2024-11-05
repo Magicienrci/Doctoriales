@@ -31,4 +31,9 @@ Route::get('/informations', [UserInformationController::class, 'index'])->name('
 Route::post('/informations', [UserInformationController::class, 'store'])->name('user.store')->middleware('auth');
 Route::put('/informations/{userInformation}', [UserInformationController::class, 'update'])->name('user.update')->middleware('auth');
 
+// Route pour le composant UserCommunication
+Route::get('/communication', function () {
+    return Inertia::render('UserCommunication');
+})->name('user.communication');
+
 require __DIR__.'/auth.php';
