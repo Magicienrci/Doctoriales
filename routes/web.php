@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserInformationController;
+use App\Http\Controllers\PaiementController;
+
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -37,8 +39,8 @@ Route::get('/communication', function () {
 })->name('user.communication');
 
 //Pour le paiement 
-Route::get('/securepay', function () {
-    return Inertia::render('Paiement');
-})->name('user.communication');
+Route::get('/securepay', [PaiementController::class, 'index'])
+    ->middleware('auth')
+    ->name('user.paiement');
 
 require __DIR__.'/auth.php';
