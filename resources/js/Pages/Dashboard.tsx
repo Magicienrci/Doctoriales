@@ -30,7 +30,7 @@ export default function Dashboard({ user }: { user: any }) {
                     <div className="instructions">
                         <ul>
                             <li className='ulgauche'>1</li>
-                            <li className='uldroite'><p>Téléchargez le TDR détaillé pour une parfaite orientation.</p> <div className='tdrdetail' onClick={() => window.open('https://doctoriales.inphb.ci/detailstdr.pdf')}>Téléchargez ici</div> </li>
+                            <li className='uldroite'><p>Téléchargez le TDR détaillé pour une parfaite orientation.</p> <br /> <div className='tdrdetail' onClick={() => window.open('https://doctoriales.inphb.ci/detailstdr.pdf')}>Téléchargez ici</div> </li>
                         </ul>
                         <ul>
                             <li className='ulgauche'>2</li>
