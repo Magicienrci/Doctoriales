@@ -31,7 +31,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }: PageProps<
                         onClick={() => window.open('https://doctoriales.inphb.ci/inscriptiondoctoriales2024.pdf')}
                         >Téléchargez la procédure d'inscription</div>
                         <div className="information"
-                        onClick={() => window.open('https://doctoriales.inphb.ci/tdrdoctoriales2024.pdf')}
+                        onClick={() => window.open('https://doctoriales.inphb.ci/tdrdoctorialesinphb2024.pdf')}
                         >Téléchargez le TERME DE RéFéRENCE</div>
                     </section>
 

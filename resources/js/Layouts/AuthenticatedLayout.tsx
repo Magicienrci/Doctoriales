@@ -23,7 +23,7 @@ export default function Authenticated({ header, children }: PropsWithChildren<{ 
                                 <div className="authfleximage"
                                     onClick={() => window.open('/', '_self')}
                                 >
-                                    <img src="https://doctoriales.inphb.ci/images/logoinphb.png" alt="Logo" />
+                                    <img src="https://doctoriales.inphb.ci/doctoriales.png" alt="Logo" />
                                 </div>
 
                                 <div className="authflexlink">
