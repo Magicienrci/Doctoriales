@@ -42,7 +42,7 @@ export default function Dashboard({ user }: { user: any }) {
                         </ul>
                         <ul>
                             <li className='ulgauche'>4</li>
-                            <li className='uldroite'><p>soumettez votre communication à partir de l'ongle ' mon résumé ' </p></li>
+                            <li className='uldroite'><p>soumettez votre communication à partir de l'onglet ' mon résumé ' </p></li>
                         </ul>
                     </div>
                     <div className="dashsection">
