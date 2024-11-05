@@ -20,12 +20,18 @@ export default function Dashboard({ user }: { user: any }) {
                 <Head title="Dashboard" />
 
                 <div className="dashcontainer">
-                <div>Vous êtes inscrits depuis le {formattedDate}</div>
-                        <div className="dashsection">
-                            <div className="dashhead">
-                                <img src="https://doctoriales.inphb.ci/images/bannerdoc.png" alt="Bannière des doctoriales" />
-                            </div>
+                    <div className='bienvenue'> 
+                        <p> 
+                            Bienvenue sur la plateforme des doctoriales INP-HB 2024 ! <br />
+                            Merci de suivre les instructions ci-dessous pour finaliser votre inscription.
+                         </p>
+                        {/* {formattedDate} */}
+                    </div>
+                    <div className="dashsection">
+                        <div className="dashhead">
+                            <img src="https://doctoriales.inphb.ci/images/bannerdoc.png" alt="Bannière des doctoriales" />
                         </div>
+                    </div>
                 </div>
             </AuthenticatedLayout>
         </>

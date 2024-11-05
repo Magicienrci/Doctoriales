@@ -27,7 +27,12 @@ export default function Welcome({ auth, laravelVersion, phpVersion }: PageProps<
                         </div>
                     </section>
                     <section className='divsection'>
-
+                        <div className="information"
+                        onClick={() => window.open('https://doctoriales.inphb.ci/inscriptiondoctoriales2024.pdf')}
+                        >Téléchargez la procédure d'inscription</div>
+                        <div className="information"
+                        onClick={() => window.open('https://doctoriales.inphb.ci/tdrdoctoriales2024.pdf')}
+                        >Téléchargez le TERME DE RéFéRENCE</div>
                     </section>
 
                 </div>
