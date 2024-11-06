@@ -21,7 +21,7 @@ export default function UserCommunication () {
                     </div>
                     <div className="lesbutton">
                         <div className="canvas"
-                        onClick={() => window.open ('https://doctoriales.inphb.ci/caneva2024.docx')}
+                        onClick={() => window.open ('https://doctoriales.inphb.ci/Ncanevas2024.dotx')}
                         >Téléchargez le caneva</div>
                         <div className="canvas"
                         onClick={() => window.open('https://forms.gle/19CSjkRSWF22Q7ct7')}
