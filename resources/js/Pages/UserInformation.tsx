@@ -37,7 +37,7 @@ export default function UserInformation({ userInformation }: UserInformationProp
         contact: userInformation?.contact || '',
         gala: userInformation?.gala || false,
         acc: userInformation?.acc || false,
-        n_acc: userInformation?.n_acc || 1,
+        n_acc: userInformation?.n_acc || 0,
     });
 
     // État pour gérer l'édition et le contrôle du bouton enregistrer/modifier
@@ -189,8 +189,6 @@ export default function UserInformation({ userInformation }: UserInformationProp
                                 <option value={1}>1</option>
                                 <option value={2}>2</option>
                                 <option value={3}>3</option>
-                                <option value={4}>4</option>
-                                <option value={5}>5</option>
                             </select>
                         </div>
 
