@@ -31,7 +31,7 @@ class UserInformationController extends Controller
             'contact' => 'required|string|max:255',
             'gala' => 'required|boolean',
             'acc' => 'required|boolean',
-            'n_acc' => 'nullable|integer|min:1|max:3',
+            'n_acc' => 'nullable|integer|min:0|max:3',
         ]);
 
         UserInformation::create([
@@ -54,21 +54,36 @@ class UserInformationController extends Controller
 
     public function update(Request $request, UserInformation $userInformation)
     {
+        // Adjust validation rules to make fields nullable for partial updates
         $request->validate([
-            'nom' => 'required|string|max:255',
-            'prenoms' => 'required|string|max:255',
-            'sexe' => 'required|in:Homme,Femme',
-            'statut' => 'required|in:Doctorant,Enseignant,Participant,Autres',
-            'ecole_origine' => 'required|string|max:255',
-            'umri_ufr' => 'required|string|max:255',
+            'nom' => 'nullable|string|max:255',
+            'prenoms' => 'nullable|string|max:255',
+            'sexe' => 'nullable|in:Homme,Femme',
+            'statut' => 'nullable|in:Doctorant,Enseignant,Participant,Autres',
+            'ecole_origine' => 'nullable|string|max:255',
+            'umri_ufr' => 'nullable|string|max:255',
             'n_etudiant' => 'nullable|string|max:255',
-            'contact' => 'required|string|max:255',
-            'gala' => 'required|boolean',
-            'acc' => 'required|boolean',
-            'n_acc' => 'nullable|integer|min:1|max:3',
+            'contact' => 'nullable|string|max:255',
+            'gala' => 'nullable|boolean',
+            'acc' => 'nullable|boolean',
+            'n_acc' => 'nullable|integer|min:0|max:3',
         ]);
+        
 
-        $userInformation->update($request->all());
+        // Update only provided fields
+        $userInformation->update($request->only([
+            'nom',
+            'prenoms',
+            'sexe',
+            'statut',
+            'ecole_origine',
+            'umri_ufr',
+            'n_etudiant',
+            'contact',
+            'gala',
+            'acc',
+            'n_acc',
+        ]));
 
         return redirect()->route('user.information');
     }

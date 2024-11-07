@@ -157,7 +157,7 @@ export default function UserInformation({ userInformation }: UserInformationProp
                                 disabled={!isEditing}
                             />
                         </div>  
-                        
+                        <div style={{textAlign: 'center', color:'red'}}>Cette section est obligatoire, veuillez cocher tous les champs. <br /> Si vous ne serez pas accompagné au gala, merci choisir zéro nombre d'invité. </div>
                         <div className='dashformdivs' >
                             <div className='dashformdivsh'>
                                 <label htmlFor='gala'>Dîner-gala ?</label>

@@ -13,7 +13,14 @@ class UserInformation extends Model
         'nom', 'prenoms', 'sexe', 'statut', 'ecole_origine', 'umri_ufr', 'n_etudiant', 'contact', 'gala', 'acc', 'n_acc', 'userid',
     ];
 
-    // Relation avec l'utilisateur
+    protected $casts = [
+        'gala' => 'boolean',
+        'acc' => 'boolean',
+    ];
+
+    /**
+     * Relationship with the User model.
+     */
     public function user()
     {
         return $this->belongsTo(User::class, 'userid');

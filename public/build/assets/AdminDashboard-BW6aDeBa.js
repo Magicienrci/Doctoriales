@@ -1,0 +1,1 @@
+import{j as e}from"./app-C-2TcMJ4.js";const d=()=>e.jsxs("div",{children:[e.jsx("h2",{children:"Tableau de Bord Admin"}),e.jsx("p",{children:"Bienvenue sur le tableau de bord de l'administrateur !"})]});export{d as default};

@@ -7,7 +7,7 @@ use Inertia\Inertia;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserInformationController;
 use App\Http\Controllers\PaiementController;
-
+use App\Http\Controllers\AdminController;
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -28,7 +28,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// Pour les infos 
+// Pour les infos
 Route::get('/informations', [UserInformationController::class, 'index'])->name('user.information')->middleware('auth');
 Route::post('/informations', [UserInformationController::class, 'store'])->name('user.store')->middleware('auth');
 Route::put('/informations/{userInformation}', [UserInformationController::class, 'update'])->name('user.update')->middleware('auth');
@@ -38,9 +38,15 @@ Route::get('/communication', function () {
     return Inertia::render('UserCommunication');
 })->name('user.communication');
 
-//Pour le paiement 
+// Pour le paiement
 Route::get('/securepay', [PaiementController::class, 'index'])
     ->middleware('auth')
     ->name('user.paiement');
+
+// Pour les admins
+Route::get('admin/login', [AdminController::class, 'showLoginForm'])->name('admin.login');
+Route::post('admin/login', [AdminController::class, 'login'])->name('admin.login.submit');
+Route::get('admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard')->middleware('auth:admin');
+Route::post('admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
 
 require __DIR__.'/auth.php';
