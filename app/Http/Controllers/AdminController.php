@@ -49,7 +49,7 @@ class AdminController extends Controller
 
         $user = User::find($request->input('userId'));
         if ($user) {
-            $user->payement = $user->payement === "Validé" ? "Non validé" : "Validé";
+            $user->payement = $user->payement === "Validé" ? "en attente" : "Validé";
             $user->save();
             return response()->json(['status' => 'success']);
         }
