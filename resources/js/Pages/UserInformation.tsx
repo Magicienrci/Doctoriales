@@ -110,9 +110,9 @@ export default function UserInformation({ userInformation }: UserInformationProp
                                 disabled={!isEditing}
                             >
                                 <option value="Doctorant">Doctorant</option>
-                                <option value="Enseignant">Enseignant</option>
-                                <option value="Participant">Participant</option>
-                                <option value="Autres">Autres</option>
+                                <option value="Enseignant">Docteur / Enseignents</option>
+                                <option value="Participant">Participant </option>
+                                {/* <option value="Autres">Autres</option> */}
                             </select>
                         
                         </div>    

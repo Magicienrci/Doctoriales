@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Inertia\Inertia;
+use App\Models\User;
+
 
 class AdminController extends Controller
 {
@@ -41,4 +43,17 @@ class AdminController extends Controller
         Auth::guard('admin')->logout();
         return redirect()->route('admin.login');
     }
+    public function togglePaymentStatus(Request $request)
+    {
+        $request->validate(['userId' => 'required|integer|exists:users,id']);
+
+        $user = User::find($request->input('userId'));
+        if ($user) {
+            $user->payement = $user->payement === "Validé" ? "Non validé" : "Validé";
+            $user->save();
+            return response()->json(['status' => 'success']);
+        }
+        return response()->json(['status' => 'error'], 404);
+    }
+
 }

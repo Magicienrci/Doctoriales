@@ -49,4 +49,14 @@ class RegisteredUserController extends Controller
 
         return redirect(route('dashboard', absolute: false));
     }
+    public function togglePaymentStatus(Request $request)
+    {
+        $user = User::find($request->input('userId'));
+        if ($user) {
+            $user->payement = $user->payement === "Validé" ? "Non validé" : "Validé";
+            $user->save();
+            return response()->json(['status' => 'success']);
+        }
+        return response()->json(['status' => 'error'], 404);
+    }
 }

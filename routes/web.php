@@ -8,6 +8,9 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserInformationController;
 use App\Http\Controllers\PaiementController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdminDashboardController;
+use App\Http\Controllers\Auth\RegisteredUserController;
+
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -46,7 +49,18 @@ Route::get('/securepay', [PaiementController::class, 'index'])
 // Pour les admins
 Route::get('admin/login', [AdminController::class, 'showLoginForm'])->name('admin.login');
 Route::post('admin/login', [AdminController::class, 'login'])->name('admin.login.submit');
+
+// Tableau de bord de l'admin
 Route::get('admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard')->middleware('auth:admin');
+
+// Déconnexion de l'admin
 Route::post('admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
 
+Route::get('/admin/tableaudebase', [AdminDashboardController::class, 'index'])->name('admin.tableaudebase');
+
+Route::post('/admin/toggle-payment-status', [AdminController::class, 'togglePaymentStatus'])
+    ->middleware('auth:admin');
+
+
+require __DIR__.'/auth.php';
 require __DIR__.'/auth.php';

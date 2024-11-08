@@ -1,0 +1,82 @@
+.admincontainer{
+    width: 100%;
+}
+.adminhead{
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+    background-color: rgb(31, 31, 31);
+    align-items: center;align-content: center;justify-content: center;display: flex;
+}
+.adminheadlogo{
+    width: 25%;
+    cursor: pointer;
+    align-items: center;align-content: center;justify-content: center;display: flex;
+}
+.adminheadlogo img{
+    width: 13%;
+}
+.adminheadtitle{
+    width: 50%;
+    color: #fff;
+    align-items: center;align-content: center;justify-content: center;display: flex;
+    font-weight: bolder;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.adminheadtitle h2{
+    text-align: center;
+    background-color: #848383;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 10px;
+
+}
+.adminheadinfos{
+    width: 25%;
+}
+
+.headercontent{
+    width: 100%;
+    align-items: center;align-content: center;justify-content: center;display: flex;
+    margin-top: 20px;
+    height: 85vh;
+    margin-bottom: 20px;
+}
+.adminmenu{
+    background-color: rgb(2, 39, 91);
+    width: 15%;
+    height: 100%;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    align-items: center;
+    align-content: center;
+    justify-content: top;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.menubutton{
+    width: 70%;
+    background-color: #fff;
+    align-items: center;align-content: center;justify-content: center;display: flex;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bolder;
+    transition: 1s;
+
+}
+.menubutton:hover{
+    background-color: #cfcdcd;
+    border: #fff solid 2px;
+    transition: 0.5s;
+}
+.adminchildren{
+    width: 85%;
+    height: 100%;
+    padding: 10px;
+}

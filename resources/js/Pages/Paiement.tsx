@@ -30,11 +30,14 @@ export default function Paiement({ user }: { user: any }) {
                         Frais de paiement : <br />
                         Doctorant INP-HB : 7000 FCFA <br />
                         Doctorant non INP-HB : 10 000 FCFA
+                        <br />
+                        Docteur | Enseignant | Autres : 15 000 FCFA
                         <br /> 
+                        <br />
                         Diner Gala : 5000 FCFA par personne qui vous accompagne (frais annexes)
                         <br /><br />
                         Une fois le paiment éffectué, veuillez nous soumettre via whatsapp la capture de votre reçu de paiement : 
-                        <div className="lefticon" onClick={() => window.open('https://wa.me/2250500126993', '_blank')}>
+                        <div className="lefticon" onClick={() => window.open('https://wa.me/2250797209817', '_blank')}>
                                 <FaWhatsappSquare />
                             </div> 
 
