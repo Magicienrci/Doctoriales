@@ -73,7 +73,7 @@ export default function Tableauadmin({ users, userInformations }: Props) {
              {/* Display error message if it exists */}
             {errorMessage && <p className="error-message">{errorMessage}</p>}
             <div className="tableaucontainer">
-                <div className="tableautitle">Liste des Utilisateurs</div>
+                <div className="tableautitle">Liste des Utilisateurs   <span style={{marginLeft:'20px', fontSize:'15px', fontWeight:'bolder'}}>Total : {userInformations.length}</span></div>
                 <hr />
                 <div className="indices">
                     <div className="indices1">
