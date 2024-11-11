@@ -88,3 +88,78 @@
     background-color: rgba(0, 128, 0, 0.354);
     border: #010000 solid 1px;
 }
+.validationbtn2{
+    width: 80%;
+    background-color: rgb(0, 73, 128);
+    margin-left: auto;margin-right: auto;
+    color: #fff;
+    border-radius: 8px;
+    border: #ddd solid 1px;
+
+}
+.validationbtn2:hover{
+    background-color: rgba(77, 77, 77, 0.354);
+    border: #010000 solid 1px;
+}
+.user-info{
+    width: 80%;
+    background-color: #ffffffeb;
+    position: relative;
+    top: -750px;
+    height: 60vh;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    padding: 30px;
+    border: rgb(2, 39, 91) solid 2px;
+}
+.close-icon{
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+    font-weight: bolder;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    background-color: rgb(2, 39, 91);
+}
+.close-icon:hover{
+    background-color: #fff;
+    color: rgb(2, 39, 91);
+    border: rgb(2, 39, 91) solid 1px;
+}
+.user-details{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;align-content: center;justify-content: center;display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+}
+.user-detailsinofos{
+    width: 100%;
+    display: flex;
+    margin-bottom: 5px;
+}
+.user-detailsinofosleft{
+    width: 20%;
+    background-color: rgb(2, 39, 91) ;
+    color: #fff;
+    font-weight: bolder;
+    padding: 5px;
+    align-content: center;justify-content: left;align-items: center;display: flex;
+    text-transform: uppercase;
+}
+.user-detailsinofosright{
+    width: 80%;
+    background-color: rgb(154, 156, 156);
+    color: #fff;
+    padding: 5px;
+    text-transform: uppercase;
+}
