@@ -142,6 +142,9 @@
     margin-top: 20px;
     flex-direction: column;
 }
+.user-detailsjj:hover{
+    background-color: #dedcdc;
+}
 .user-detailsinofos{
     width: 100%;
     display: flex;

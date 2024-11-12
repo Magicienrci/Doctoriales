@@ -135,7 +135,7 @@ export default function Tableauadmin({ users, userInformations }: Props) {
                         </thead>
                         <tbody>
                             {paginatedUsers.map((user) => (
-                                <tr key={user.id}>
+                                <tr key={user.id} className="user-detailsjj">
                                     <td style={{ border: "1px solid #ddd", padding: "8px", textTransform: 'uppercase' }}>
                                         {user.name.toUpperCase()}
                                     </td>
